@@ -1,14 +1,18 @@
-function web() {
-  page=""
-  case $1 in
-    "google") page="https://google.com" ;;
-    "gmail") page="https://gmail.com" ;;
-    "gcalendar") page="https://calendar.google.com" ;;
-  esac
-
-  open "$page"
+function openweb() {
+  url=$1
+  if [[ $url = http* ]]
+  then
+    open $url
+  else
+    url="https://${url}"
+    open $url
+  fi
 }
 
-alias wg='web google'
-alias wgm='web gmail'
-alias wgc='web gcalendar'
+alias oweb='openweb'
+alias owg='openweb https://google.com'
+alias owgm='openweb https://gmail.com'
+alias owgc='openweb https://calendar.google.com'
+alias owl='openweb http://localhost'
+alias owl3000='openweb http://localhost:3000'
+alias owl8080='openweb http://localhost:8080'
