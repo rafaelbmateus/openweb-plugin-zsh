@@ -25,6 +25,10 @@ plugins=(
 
 ```console
 openweb
+
+or
+
+openweb google.com
 ```
 
 # Alias
