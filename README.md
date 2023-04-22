@@ -23,12 +23,16 @@ plugins=(
 
 # Usage
 
+To open your web browser from terminal execute:
+
 ```console
 openweb
+```
 
-or
+Or to open a specific url:
 
-openweb google.com
+```console
+openweb google.com.br
 ```
 
 # Alias
